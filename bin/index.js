@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const puppeteer = require('puppeteer');
-const delay = require('delay');
+//const delay = require('delay');
 const url = require('url');
 const querystring = require('querystring');
 
@@ -17,7 +17,7 @@ const querystring = require('querystring');
       .replace(/ /g, '+')}&source=lnms&tbm=isch&sa=X`,
   );
 
-  await delay(1000);
+  //await delay(1000);
 
   await page.waitForSelector('#search a');
   const stories = await page.evaluate(() => {
